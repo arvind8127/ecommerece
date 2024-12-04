@@ -4,11 +4,12 @@ const footer = () => {
   return (
     <>
     <footer>
+      
         <Container>
             <Row>
-              <Col className="text-center">
+              <Col  className="text-center">
 
-              <span >
+              <span>
                     Copyright &copy; tach info yt
                 </span>
               </Col>
@@ -21,4 +22,4 @@ const footer = () => {
   )
 }
 
-export default footer
+export default footer;

@@ -1,5 +1,5 @@
 
-const products = [
+export const products = [
     {
       _id: '1',
       name: 'boAt Airdopes 121v2 TWS Earbuds',
@@ -81,5 +81,3 @@ const products = [
   ]
   
   
-
-  export default products

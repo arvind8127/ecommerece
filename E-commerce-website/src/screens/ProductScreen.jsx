@@ -1,24 +1,44 @@
-import React from 'react'
+import React from 'react';
 import { Card } from 'react-bootstrap';
+import Rating from '../components/Rating';
+import {Link} from 'react-router-dom';
 
 
 const ProductScreen = ({ product }) => {
+
+console.log(product)
+
+
+
+
+
+
   return (
     <>
-<Card className="my-3, py-3 rounded">
-<a href={ '/product/${products._id}'}>
+<Card className='my-3 p-3 rounded'>
+  <Link to={"/product/${product._id}"}>
 <Card.Img src={product.image} variant='top'/>
+</Link>
 
-</a>
 <Card.Body>
-  <a href={'/product/${products._id}'}>
-  <Card.Title as ="div" > 
-<strong>{product.name}</strong>
+  <Link to={"/product/${product._id}"}>
+  <Card.Title as = 'div'>
+    <strong>{product.name}</strong>
   </Card.Title>
+  </Link>
 
-  </a>
+<Card.Text as ='div'>
+ <Rating  value={product.rating} text={'${product.numReviews} reviews'}/>
+{/* <div className='my-3'> */}
+  {product.rating} from {product.numReviews} reviews
+
+{/* </div> */}
+</Card.Text>
+
+<Card.Text as='div'>
+  $ {product.price}
+</Card.Text>
 </Card.Body>
-
 
 </Card>
     </>
